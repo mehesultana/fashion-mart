@@ -18,7 +18,7 @@ const showProducts = (products) => {
         div.innerHTML = `
             <div class="card single-product  h-100 g-4">
                     <img src=${image} class="card-img-top product-image" alt="...">
-                <div class="card-body bg-success bg-opacity-10">
+                <div class="card-body ">
                 <h3>${product.title.slice(0, 12)}</h3>
                 <p>Category: ${product.category}</p>
                 <h2>Price: $ ${product.price}</h2>
