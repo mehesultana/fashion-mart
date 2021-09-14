@@ -1,3 +1,4 @@
+// load Products
 const loadProducts = () => {
     const url = `https://fakestoreapi.com/products`;
     fetch(url)
@@ -33,6 +34,7 @@ const showProducts = (products) => {
     }
 };
 
+// add To Cart
 let count = 0;
 const addToCart = (id, price) => {
     count = count + 1;
