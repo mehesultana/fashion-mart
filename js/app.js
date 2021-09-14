@@ -17,7 +17,7 @@ const showProducts = (products) => {
         div.classList.add('product');
         div.innerHTML = `
             <div class="card single-product  h-100 g-4">
-                    <img src=${image} class="card-img-top product-image" alt="...">
+                    <img src=${image} class="card-img-top product-image " alt="...">
                 <div class="card-body ">
                 <h3>${product.title.slice(0, 12)}</h3>
                 <p>Category: ${product.category}</p>
@@ -65,6 +65,9 @@ const setInnerText = (id, value) => {
 // update delivery charge and total Tax
 const updateTaxAndCharge = () => {
     const priceConverted = getInputValue('price');
+    if (priceConverted > 0) {
+        setInnerText('delivery-charge', 20);
+    }
     if (priceConverted > 200) {
         setInnerText('delivery-charge', 30);
         setInnerText('total-tax', priceConverted * 0.2);
